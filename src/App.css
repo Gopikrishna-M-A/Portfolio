@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Solway:wght@300;400;500;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title{
+  font-family: "Solway";
+  font-weight: 700;
+  /* font-size: 52px; */
+  color: #474747;
+}
+.para{
+  font-family:"Gaegu";
+  font-weight: 700;
+  font-size: 24px;
+  color: #8D8FA6;
+}
+.skill-title{
+  margin-top: 40px;
+}
+.skill-wrapper{
+  margin-top: 10px;
+  display: flex;
+  width: 100vw;
+  max-width: 450px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.skill{
+  padding: 5px 15px;
+  border: 1px solid #474747;;
+  border-radius: 10px;
+  font-family:"Gaegu";
+  font-weight: 700;
+  font-size: 24px;
+  color: #474747;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.resume{
+  margin-top: 50px;
+  font-family:"Gaegu";
+  font-weight: 700;
+  color: #8D8FA6;
+  border: none;
+  font-size: 24px;
+  background: none;
+  box-shadow: none;
+}
+
+
+.about{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 100px 40px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+@media (width<500px){
+  .about{
+    padding:100px 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .skill-wrapper{
+   max-width: 100%;
   }
 }
