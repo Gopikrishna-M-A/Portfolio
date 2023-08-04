@@ -20,6 +20,10 @@ body{
   font-size: 24px;
   color: #8D8FA6;
 }
+
+
+/* SKILLS */
+
 .skill-title{
   margin-top: 40px;
 }
@@ -65,6 +69,137 @@ body{
 
 
 
+/* PROJECTS */
+
+
+.projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 100px 40px;
+  padding-top: 0;
+}
+
+.project-title {
+  position: relative;
+  margin: 0 20px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.project-title::before,
+.project-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 10px;
+  background-image: url("/public/line.svg"); /* Reference the line.svg file from the public folder */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.project-title::before {
+  left: -110px;
+  transform: translateY(-50%);
+}
+
+.project-title::after {
+  right: -110px;
+  transform: translateY(-50%);
+}
+
+
+
+/* CONTACT */
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 100px 40px;
+  padding-top: 50px;
+}
+
+.contact-title {
+  position: relative;
+  margin: 0 20px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.contact-title::before,
+.contact-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 10px;
+  background-image: url("/public/line.svg"); /* Reference the line.svg file from the public folder */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contact-title::before {
+  left: -110px;
+  transform: translateY(-50%);
+}
+
+.contact-title::after {
+  right: -110px;
+  transform: translateY(-50%);
+}
+.contact-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.email{
+  font-family:"Gaegu";
+  font-weight: 700;
+  font-size: 24px;
+  color: #474747;
+  transition: .2s all ease-in-out;
+}
+.links-wrapper{
+  display: flex;
+  gap: 20px;
+}
+.links{
+  text-decoration: none;
+  color: #474747;
+
+}
+.social-icon{
+  font-size: 24px;
+  border:  1px solid #474747;
+  padding: 10px;
+  border-radius: 50%;
+  transition: .2s all ease-in;
+}
+
+.social-icon:hover{
+  font-size: 26px;
+  color: #000000;
+}
+
+.email:hover{
+  color: #000000;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
 
 @media (width<500px){
   .about{
@@ -72,5 +207,32 @@ body{
   }
   .skill-wrapper{
    max-width: 100%;
+  }
+  .project-title::before {
+    transform: scale(0.7);
+  }
+  
+  .project-title::after {
+    transform: scale(0.7);
+  }
+  .contact-title::before {
+    transform: scale(0.6);
+  }
+  
+  .contact-title::after {
+    transform: scale(0.6);
+  }
+}
+
+
+
+
+
+@media (width<300px){
+  .about{
+    padding:50px 20px;
+  }
+  .projects{
+    padding-top: 100px ;
   }
 }
